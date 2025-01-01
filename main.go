@@ -2,7 +2,6 @@ package main
 
 import (
 	"context"
-	"fmt"
 	"log"
 	"os"
 
@@ -48,7 +47,7 @@ func main() {
 
 	routes.Routes(router)
 
-	log.Fatal(router.Run(fmt.Sprint(":", port)))
+	log.Fatal(router.Run("0.0.0.0:" + port))
 
 	defer func() {
 		ok := mongoClient.Disconnect(context.TODO())
