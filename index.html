@@ -95,6 +95,8 @@
                             input.value = ""
                             copyBtn.innerText = "copy!"
                             result.innerText = `${origin}/${data.url}`
+                        } else {
+                            console.error('Error: Invalid response format');
                         }
                     } catch (error) {
                         console.error('Error:', error);
